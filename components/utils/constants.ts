@@ -24,7 +24,7 @@ export const backgroundImages: string[] = [
       headingMargin: "mb-2",
       headingTextWrap: "text-wrap",
       paragraphMargin: "mb-6",
-      btnpadding: "w-1/2 py-2 px-2  rounded",
+      btnpadding: "w-1/3 py-4  rounded",
     },
     {
       containerClasses: "p-5 bg-cover bg-center rounded-lg shadow-lg max-w-md mx-auto overflow-hidden",
@@ -41,7 +41,7 @@ export const backgroundImages: string[] = [
       headingMargin: "mb-8",
       headingTextWrap: "text-wrap",
       paragraphMargin: "mb-2 ",
-      btnpadding: "w-1/2 ",
+      btnpadding: "w-full py-2 px-4 rounded",
     },
     {
       containerClasses: "p-5 bg-cover bg-center rounded-lg shadow-lg max-w-md mx-auto overflow-hidden m-4",
@@ -57,8 +57,8 @@ export const backgroundImages: string[] = [
       textAlign: "text-center mt-4",
       headingMargin: "mb-2",
       headingTextWrap: "",
-      paragraphMargin: "mb-2 mt-14",
-      btnpadding: "w-1/2 py-2 px-2 rounded",
+      paragraphMargin: "mb-2 mt-28",
+      btnpadding: "w-1/3 py-2  rounded",
 
     },
     {
@@ -75,8 +75,8 @@ export const backgroundImages: string[] = [
       textAlign: "text-center mt-2",
       headingMargin: "mb-1",
       headingTextWrap: "text-wrap",
-      paragraphMargin: "mb-6 mr-60",
-      btnpadding: "w-1/2 py-2 px-2 rounded",
+      paragraphMargin: "mb-6 mr-64 mt-10",
+      btnpadding: "w-full py-2 px-4 rounded",
     },
   ];
   

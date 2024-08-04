@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Dialog,
   DialogActions,
@@ -9,9 +9,8 @@ import {
   Button,
   Avatar,
 } from "@mui/material";
-import { setBannerData } from "./utils/bannerSlice";
-import { useSelector } from "react-redux";
 import { RootState } from "./utils/store";
+import { updateBannerDataByIndex } from "./utils/bannerSlice";
 
 interface EditBannerImgProps {
   open: boolean;
@@ -22,21 +21,36 @@ interface EditBannerImgProps {
 const EditBannerImg: React.FC<EditBannerImgProps> = ({
   open,
   handleClose,
-
   index,
 }) => {
   const dispatch = useDispatch();
   const bannerData = useSelector((state: RootState) => state.banner);
-  const [title, setTitle] = useState(bannerData.title);
-  const [description, setDescription] = useState(bannerData.description);
-  const [cta, setCta] = useState(bannerData.cta);
+
+  const [title, setTitle] = useState(bannerData.title[index]);
+  const [description, setDescription] = useState(bannerData.description[index]);
+  const [cta, setCta] = useState(bannerData.cta[index]);
   const [selectedImage, setSelectedImage] = useState(bannerData.images[index]);
 
-  const handleSave = () => {
-    const updatedImages = [...bannerData.images];
-    updatedImages[index] = selectedImage;
+  useEffect(() => {
+    if (open) {
+      setTitle(bannerData.title[index]);
+      setDescription(bannerData.description[index]);
+      setCta(bannerData.cta[index]);
+      setSelectedImage(bannerData.images[index]);
+    }
+  }, [open, bannerData, index]);
 
-    dispatch(setBannerData({ title, description, cta, images: updatedImages }));
+  const handleSave = () => {
+    console.log(index);
+    dispatch(
+      updateBannerDataByIndex({
+        index,
+        title,
+        description,
+        cta,
+        image: selectedImage,
+      })
+    );
     handleClose();
   };
 

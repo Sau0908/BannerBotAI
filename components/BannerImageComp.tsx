@@ -44,18 +44,18 @@ const BannerImageComp: React.FC<BannerImageCompProps> = ({ index }) => {
           <h1
             className={`text-4xl font-bold ${styles.headingMargin} ${styles.textColor} ${styles.headingTextWrap}`}
           >
-            {bannerData.title}
+            {bannerData.title[index] || bannerData.title[0]}
           </h1>
           <p
             className={`text-xl ${styles.textColor} ${styles.paragraphMargin}`}
           >
-            {bannerData.description}
+            {bannerData.description[index] || bannerData.description[0]}
           </p>
         </div>
         <button
           className={`${styles.buttonPosition} ${styles.buttonColor} ${styles.buttonText} ${styles.btnpadding} ${styles.buttonHover}`}
         >
-          {bannerData.cta}
+          {bannerData.cta[index] || bannerData.cta[0]}
         </button>
       </div>
       <div className={styles.imagePosition}>
