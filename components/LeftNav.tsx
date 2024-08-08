@@ -12,7 +12,7 @@ const LeftNav: React.FC = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-1/3 h-screen bg-gray-800 p-5 flex flex-col space-y-5">
+    <div className="fixed z-10 top-0 left-0 w-full md:w-1/3 h-auto md:h-screen bg-gray-800 p-5 flex flex-col space-y-5">
       <h2 className="text-3xl font-bold text-white">Ad Banner Generator</h2>
       <h4 className="text-xl text-white underline">
         An AI Powered Generation Tool

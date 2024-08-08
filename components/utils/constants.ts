@@ -57,7 +57,7 @@ export const backgroundImages: string[] = [
       textAlign: "text-center mt-4",
       headingMargin: "mb-2",
       headingTextWrap: "",
-      paragraphMargin: "mb-2 mt-28",
+      paragraphMargin: "mb-2 mt-20",
       btnpadding: "w-1/3 py-2  rounded",
 
     },
